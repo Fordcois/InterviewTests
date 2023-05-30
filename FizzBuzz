@@ -1,0 +1,14 @@
+FirstVariableNum=3
+FirstVariableOutputWord='Fizz'
+SecondVariableNum=5
+SecondVariableOutputWord='Buzz'
+
+for i in range (1,101):
+    Value=''
+    if i%(FirstVariableNum)==0: 
+        Value=Value+(FirstVariableOutputWord)
+    if i%(SecondVariableNum)==0:
+        Value=Value+(SecondVariableOutputWord)
+    if (Value==''):
+        Value=(str(i))
+    print (Value)
