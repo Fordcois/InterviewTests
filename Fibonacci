@@ -1,0 +1,16 @@
+# Fibonacci Sequence - Function that will return a N value of the Fibonacci Sequence
+FibSeq=[ 0, 1,]
+
+def CheckSequence(TargetFibNum):
+    ValuesCalculated=(len(FibSeq))
+    if TargetFibNum==0:
+        print ('There is no zero Number! - Enter a number to find it in the Fibonacci sequence')
+    else: 
+        try:
+            print ('Number '+ (str(TargetFibNum)) + ' in the Fibbonacci Sequence is '+(str(FibSeq[(TargetFibNum-1)])))
+        except IndexError:
+            NextNumber=((FibSeq[ValuesCalculated-1])+FibSeq[ValuesCalculated-2])
+            FibSeq.append(NextNumber)
+            CheckSequence(TargetFibNum)
+
+CheckSequence(10)
